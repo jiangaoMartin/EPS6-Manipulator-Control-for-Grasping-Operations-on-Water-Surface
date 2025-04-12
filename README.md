@@ -63,7 +63,7 @@ This video shows the Blueboat platform aligning its orientation and position wit
 ### Dual-Arm Grasp Execution
 
 <div align="center">
-  <img src="materials/grasping_demo.gif" alt="Grasping Demo" width="600"/>
+  <img src="materials/grasping.gif" alt="Grasping Demo" width="600"/>
 </div>
 
 This demo illustrates the coordinated grasping motion performed by the dual manipulators after successful alignment.
