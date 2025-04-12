@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<scenario>
+	<environment>
+		<ned latitude="41.7777" longitude="3.0333"/>
+		<ocean />
+		<atmosphere>
+			<sun azimuth="20.0" elevation="50.0"/>
+		</atmosphere>
+	</environment>
+
+	<materials>
+		<material name="Neutral" density="1000.0" restitution="0.5"/>
+		<material name="Rock" density="3000.0" restitution="0.8"/>
+		<material name="Fiberglass" density="1500.0" restitution="0.3"/>
+		<material name="Aluminium" density="2710.0" restitution="0.7"/>
+		<material name="Polyamid" density="1500.0" restitution="0.1"/>
+		<material name="Plastic" density="900.0" restitution="0.4"/>
+
+
+		<friction_table>
+			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Rock" static="0.2" dynamic="0.1"/>
+			<friction material1="Neutral" material2="Fiberglass" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Aluminium" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Polyamid" static="0.2" dynamic="0.05"/>
+			<friction material1="Rock" material2="Rock" static="0.9" dynamic="0.7"/>
+			<friction material1="Rock" material2="Fiberglass" static="0.6" dynamic="0.4"/>
+			<friction material1="Rock" material2="Aluminium" static="0.6" dynamic="0.3"/>
+			<friction material1="Rock" material2="Polyamid" static="0.4" dynamic="0.2"/>
+			<friction material1="Fiberglass" material2="Fiberglass" static="0.5" dynamic="0.2"/>
+			<friction material1="Fiberglass" material2="Aluminium" static="0.5" dynamic="0.2"/>
+			<friction material1="Fiberglass" material2="Polyamid" static="0.1" dynamic="0.05"/>
+			<friction material1="Aluminium" material2="Aluminium" static="0.8" dynamic="0.5"/>
+			<friction material1="Aluminium" material2="Polyamid" static="0.1" dynamic="0.05"/>
+			<friction material1="Polyamid" material2="Polyamid" static="0.1" dynamic="0.05"/>
+			<friction material1="Plastic" material2="Neutral" static="0.99" dynamic="0.99"/>
+			<!-- <friction material1="Plastic" material2="Neutral" static="0.5" dynamic="0.3"/> -->
+			<friction material1="Plastic" material2="Rock" static="0.4" dynamic="0.2"/>
+			<friction material1="Plastic" material2="Fiberglass" static="0.5" dynamic="0.3"/>
+			<friction material1="Plastic" material2="Aluminium" static="0.5" dynamic="0.3"/>
+			<friction material1="Plastic" material2="Polyamid" static="0.99" dynamic="0.99"/>
+			<!-- <friction material1="Plastic" material2="Polyamid" static="0.4" dynamic="0.2"/> -->
+			<friction material1="Plastic" material2="Plastic" static="0.99" dynamic="0.99"/>
+
+		</friction_table>
+	</materials>
+
+	<looks>
+		<look name="tank" rgb="0.9 0.9 0.9" roughness="0.9"/>
+		<look name="cylinder" gray="1.0" roughness="0.9" />
+		<look name="tri_p" gray="1.0" roughness="0.9" />
+		<look name="White" rgb="64 128 64" roughness="0.5"/>
+	</looks>
+	
+
+
+	<static name="Obstacle33" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="3.0 2.75 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle04" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  
+		<origin xyz="0.0 4.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="White"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static> 
+	
+
+
+	<static name="Obstacle32" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="3.0 2.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle42" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="4.0 2.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle52" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="5.0 2.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle62" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="6.0 2.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle010" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="1.0 1.0 1.0"/>  <!-- 1m wide and 1m high. -->
+		<origin xyz="0.0 10.0 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="Obstacle6622" type="box" physics="submerged" buoyant="true">
+		<dimensions xyz="2.0 2.0 1.0"/>  <!-- 2m wide and 2m high. -->
+		<origin xyz="6.5 6.5 0.0" rpy="0.0 0.0 0.0"/>
+		<material name="Rock"/>
+		<look name="Gray"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+
+	<!-- <origin xyz="0.099 0.0 0.0" rpy="0.0 1.5708 1.5708"/> -->
+	<!-- <dynamic name="Cyl" type="cylinder" physics="submerged">
+		<dimensions radius="0.02" height="0.8"/>
+		<origin xyz="2.0 0.0 0.0" rpy="0.0 1.5708 1.5708"/>
+
+		<inertia ixx="0.000006" iyy="0.000006" izz="0.000006" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		<hydrodynamics viscous_drag="0.1 0.1 0.1" quadratic_drag="0.1 0.1 0.1"/>
+		<buoyancy density="1000.0" center="0.0 0.0 0.0"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+
+
+		<sensor name="Odometry_Left" rate="10.0" type="odometry">
+			<noise position="0.05" velocity="0.01" angle="0.1" angular_velocity="0.05"/>
+			<history samples="1"/>
+			<origin xyz="2.0 0.4 0.0" rpy="0.0 0.0 0.0"/>  
+			<ros_publisher topic="/cyl/odom_left" frame_id="world_ned" child_frame_id="Cyl_Left"/>
+		</sensor>
+
+
+		<sensor name="Odometry_Right" rate="10.0" type="odometry">
+			<noise position="0.05" velocity="0.01" angle="0.1" angular_velocity="0.05"/>
+			<history samples="1"/>
+			<origin xyz="2.0 -0.4 0.0" rpy="0.0 0.0 0.0"/> 
+			<ros_publisher topic="/cyl/odom_right" frame_id="world_ned" child_frame_id="Cyl_Right"/>
+		</sensor>
+
+	</dynamic> -->
+
+
+<!--Integrate-->
+
+<!--x=3,y=5-->
+	<dynamic name="Cyl" type="cylinder" physics="submerged">
+		<dimensions radius="0.02" height="0.8"/>
+		<origin xyz="5.5 4.0 0.0" rpy="0.0 1.5708 1.5708"/>
+
+		<inertia ixx="0.000006" iyy="0.000006" izz="0.000006" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		<hydrodynamics viscous_drag="0.1 0.1 0.1" quadratic_drag="0.1 0.1 0.1"/>
+
+		
+		<buoyancy density="1000.0" center="0.0 0.0 0.0"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		<sensor name="odom_sensor" rate="10.0" type="odometry">
+			<parent>Cyl</parent>
+			<origin xyz="5.5 4.0 0.0" rpy="0.0 0.0 0.0"/>
+			<noise>
+				<position>0.05</position>
+				<velocity>0.01</velocity>
+				<angle>0.1</angle>
+				<angular_velocity>0.05</angular_velocity>
+			</noise>
+			<history samples="5"/>
+			<ros_publisher topic="/cyl/odom" frame_id="world_ned" child_frame_id="Cyl"/>
+		</sensor>
+
+	</dynamic>
+
+
+<!-- final x-->
+
+	<!-- <dynamic name="Cyl" type="cylinder" physics="submerged">
+		<dimensions radius="0.02" height="0.8"/>
+		<origin xyz="2.099 0.0 0.0" rpy="0.0 1.5708 1.5708"/>
+
+		<inertia ixx="0.000006" iyy="0.000006" izz="0.000006" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		<hydrodynamics viscous_drag="0.1 0.1 0.1" quadratic_drag="0.1 0.1 0.1"/>
+
+		
+		<buoyancy density="1000.0" center="0.0 0.0 0.0"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		<sensor name="odom_sensor" rate="10.0" type="odometry">
+			<parent>Cyl</parent>
+			<origin xyz="2.099 0.0 0.0" rpy="0.0 0.0 0.0"/>
+			<noise>
+				<position>0.05</position>
+				<velocity>0.01</velocity>
+				<angle>0.1</angle>
+				<angular_velocity>0.05</angular_velocity>
+			</noise>
+			<history samples="5"/>
+			<ros_publisher topic="/cyl/odom" frame_id="world_ned" child_frame_id="Cyl"/>
+		</sensor>
+
+	</dynamic> -->
+
+
+
+
+
+
+<!--one odom-->
+	<!-- <dynamic name="Cyl" type="cylinder" physics="submerged">
+		<dimensions radius="0.02" height="0.8"/>
+		<origin xyz="3.099 0.05 0.0" rpy="0.0 1.5708 1.5708"/>
+
+		<inertia ixx="0.000006" iyy="0.000006" izz="0.000006" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		<hydrodynamics viscous_drag="0.1 0.1 0.1" quadratic_drag="0.1 0.1 0.1"/>
+
+		
+		<buoyancy density="1000.0" center="0.0 0.0 0.0"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+		<world_transform xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		<sensor name="odom_sensor" rate="10.0" type="odometry">
+			<parent>Cyl</parent>
+			<origin xyz="3.099 1.0 0.0" rpy="0.0 0.0 0.0"/>
+			<noise>
+				<position>0.05</position>
+				<velocity>0.01</velocity>
+				<angle>0.1</angle>
+				<angular_velocity>0.05</angular_velocity>
+			</noise>
+			<history samples="5"/>
+			<ros_publisher topic="/cyl/odom" frame_id="world_ned" child_frame_id="Cyl"/>
+		</sensor>
+
+	</dynamic> -->
+
+
+
+
+
+
+	<!-- <dynamic name="cylinder" type="model">
+		<physical>
+			<mesh filename="wind_turbine/second_cylinder.obj" scale="0.3"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			
+		</physical>
+
+		<hydrodynamics>
+			<drag coefficient="3.0"/>
+			<added_mass coefficient="10.0"/>
+		</hydrodynamics>
+
+	
+		<mass value="0.01"/>
+		<inertia ixx="0.2" iyy="0.2" izz="0.2" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		
+		<buoyancy density="1000.0" center="0.0 0.0 0.1"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+
+		<world_transform rpy="0.0 0.0 -1.5708" xyz="0.625 0.0 0.0"/>
+	</dynamic> -->
+
+
+
+
+
+
+
+
+	<!-- <dynamic name="cylinder" type="model">
+		<physical>
+			<mesh filename="wind_turbine/second_cylinder.obj" scale="0.5"/>
+			<origin rpy="3.14 0.0 0.0" xyz="4.0 0.04 2.0"/>
+			
+			
+			
+		</physical>
+	
+		<mass value="0.0125"/>
+		<inertia ixx="0.2" iyy="0.2" izz="0.2" ixy="0.0" ixz="0.0" iyz="0.0"/>
+		
+		<buoyancy density="1000.0" center="0.0 0.0 0.1"/>
+		<material name="Plastic"/>
+		<look name="cylinder"/>
+
+		<world_transform rpy="0.0 0.0 1.57" xyz="0.7 -3.975 -2.0"/>
+	</dynamic> -->
+
+
+			
+			<!-- <collision>
+				<primitive shape="cylinder" radius="0.25" height="1.0"/>
+			</collision> -->
+
+
+
+
+
+
+	<!-- <static name="Wavetank" type="model">
+		<physical>
+			<mesh filename="wavetank.obj" scale="1.0"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+		</physical>
+		<material name="Rock"/>
+		<look name="tank"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 5.0"/>
+	</static>
+
+	<static name="Wavetank_floor" type="model">
+		<physical>
+			<mesh filename="wavetank_floor.obj" scale="1.0"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+		</physical>
+		<material name="Rock"/>
+		<look name="tank"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 -1.0"/>
+	</static> -->
+
+<!-- <include file="$(find cola2_stonefish)/scenarios/blueboat_alpha.scn"> -->
+<!-- <include file="$(find cola2_stonefish)/scenarios/inverse_blueboat_alpha.scn"> -->
+
+
+
+	<!-- <include file="$(find cola2_stonefish)/scenarios/target_two_blueboat_alpha.scn"> -->
+	<include file="$(find cola2_stonefish)/scenarios/blueboat.scn">
+		<arg name="position" value="0.0 0.0 1.0"/>
+	</include>
+</scenario>
