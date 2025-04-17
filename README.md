@@ -15,7 +15,7 @@ The figure below shows the modified Blueboat platform equipped with two manipula
 
 This project uses the **Stonefish ROS2** marine simulation environment.  
 The specific simulation world and robot configuration used in this project are adapted from:  
-🔗 [markusbuchholz/stonefish_ros2_marine_robotics](https://github.com/markusbuchholz/stonefish_ros2_marine_robotics)
+[markusbuchholz/stonefish_ros2_marine_robotics](https://github.com/Michele1996/stonefish_resources_pub)
 
 Please refer to that repository for detailed instructions on installing Stonefish with ROS2 and Docker support.
 
